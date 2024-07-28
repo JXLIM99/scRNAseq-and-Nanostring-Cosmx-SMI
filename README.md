@@ -54,8 +54,10 @@ which should install in about 5 minutes.
 Users should install the following packages prior to running the script, from an `R` terminal:
 
 ```
-install.packages("ggplot2, tidyverse, "Matrix", "RCurl", "scales", "data.table", "readxl", "BiocManager", "ggpubr", "Seurat")
-BiocManager::install("ensembldb", "org.Hs.eg.db", "clusterProfiler", "biomaRt", "enrichplot", "AnnotationHub")
+install.packages("ggplot2, tidyverse, "Matrix", "RCurl", "scales", "data.table", "readxl", "BiocManager", "ggpubr", "Seurat","clustertree", "gseaplot2", "openxlsx", "devtools", "gridExtra", "matrixStats", "pheatmap", "patchwork", "reshape2", "dplyr")
+BiocManager::install("ensembldb", "org.Hs.eg.db", "clusterProfiler", "biomaRt", "enrichplot", "AnnotationHub", "ComplexHeatmap", "BiocNeighbors", "org.Mm.eg.db")
+devtools::install_github("junjunlab/scRNAtoolVis")
+devtools::install_github("sqjin/CellChat") 
 ```
 
 Each of which will install in about 1 minute on a machine with the recommended specs.
