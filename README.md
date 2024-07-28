@@ -10,9 +10,7 @@
 - [Installation Guide](#installation-guide)
 - [Demo](#demo)
 - [Results](#results)
-- [License](./LICENSE)
 - [Issues](https://github.com/ebridge2/lol/issues)
-- [Citation](#citation)
 
 # Overview
 Single cell study on mouse melanoma tumour infiltrating immune cells and human melanoma peripheral blood mononuclear cells from patients post anti-PD1 therapy.Spatial transcriptomics analysis of mouse tumor tissue from Rag-/- B6 mice. Mice were reconstituted with B16 tumor and then at day 7 reconstituted with WT T effectors along with either WT T regulatory cells or PD1-/- T regulatory cells. Nanostring spatial analysis on tumor tissue was performed when tumor size reached >800mm3.
@@ -56,7 +54,8 @@ which should install in about 5 minutes.
 Users should install the following packages prior to running the script, from an `R` terminal:
 
 ```
-install.packages(c('ggplot2', ))
+install.packages("ggplot2, tidyverse, "Matrix", "RCurl", "scales", "data.table", "readxl", "BiocManager", "ggpubr", "Seurat")
+BiocManager::install("ensembldb", "org.Hs.eg.db", "clusterProfiler", "biomaRt", "enrichplot", "AnnotationHub")
 ```
 
 Each of which will install in about 1 minute on a machine with the recommended specs.
