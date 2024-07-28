@@ -13,7 +13,9 @@ library(ggplot2)
 library(ggpubr)
 library (HGNChelper)
 
-expMat <- ReadMtx (mtx = "matrix.mtx", cells = "barcodes.tsv", features = "features.tsv", cell.column = 1, feature.column = 2, cell.sep = "\t", feature.sep= "\t", skip.cell = 0, skip.feature = 0, mtx.transpose = FALSE, unique.features = TRUE)
+expMat <- ReadMtx (mtx = "matrix.mtx", cells = "barcodes.tsv", features = "features.tsv", 
+                   cell.column = 1, feature.column = 2, cell.sep = "\t", feature.sep= "\t", 
+                   skip.cell = 0, skip.feature = 0, mtx.transpose = FALSE, unique.features = TRUE)
 expMat[1:5,1:5]
 
 rna <- Seurat::CreateSeuratObject(counts = expMat, min.cells = 0, min.features = 0, assay = "RNA")
@@ -310,7 +312,6 @@ ggplot(data=DEresult, aes(x=avg_log2FC, y=-log10(p_val))) +
   ylab("-log10(p_val)")
 
 #Section 6: Enrichment Analysis of Tregs
-# libraries for this chapter
 library(tidyverse)
 library(Seurat)
 library(data.table)
