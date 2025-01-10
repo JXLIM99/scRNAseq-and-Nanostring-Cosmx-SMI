@@ -13,7 +13,7 @@
 - [Issues](https://github.com/ebridge2/lol/issues)
 
 # Overview
-Single cell study on mouse melanoma tumour infiltrating immune cells and human melanoma peripheral blood mononuclear cells from patients post anti-PD1 therapy.Spatial transcriptomics analysis of mouse tumor tissue from Rag-/- B6 mice. Mice were reconstituted with B16 tumor and then at day 7 reconstituted with WT T effectors along with either WT T regulatory cells or PD1-/- T regulatory cells. Nanostring spatial analysis on tumor tissue was performed when tumor size reached >800mm3.
+Single cell study on mouse melanoma tumour infiltrating immune cells, human melanoma peripheral blood mononuclear cells and tumor samples from patients. Spatial transcriptomics analysis of mouse tumor tissue from Rag-/- B6 mice. Mice were reconstituted with B16 tumor and then at day 7 reconstituted with WT T effectors along with either WT T regulatory cells or PD1-/- T regulatory cells. Nanostring spatial analysis on tumor tissue was performed when tumor size reached >800mm3.
 
 # Repo Contents
 
