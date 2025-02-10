@@ -267,7 +267,7 @@ VlnPlot(object = Treg,
 library(clusrank)
 library(dplyr)
 
-gene <- "Tnfrsf8"
+gene <- "Tnfrsf8" #also test Tnfrsf18, Lrrc32, Ctla4, Tigit
 expression_data <- FetchData(object = Treg, vars = c("Sample_Name", "Sample_Tag", gene))
 clusWilcox.test(Tnfrsf8 ~ Sample_Name + cluster(Sample_Tag), data = expression_data, method = "ds")
 
