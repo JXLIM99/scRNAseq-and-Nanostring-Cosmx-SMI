@@ -160,7 +160,7 @@ jjDotPlot(TN_so,
 #and tumor from melanoma patients (publicly mined data), related to Fig6f-i
 
 TN_so$Sample_Name<- "TIL"
-TN_so$Sample_Tag <- "Individual"
+TN_so$Sample_Tag <- TN_so$Individual
 common_genes <- intersect(rownames(TN_so), rownames(integrate.filtered.MCHC)) #integrate.filtered.MCHC contains our in-house human scRNAseq data
 obj1 <- subset(TN_so, features = common_genes)
 obj2 <- subset(integrate.filtered.MCHC, features = common_genes)
