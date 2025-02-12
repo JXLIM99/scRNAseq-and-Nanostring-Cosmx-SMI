@@ -268,7 +268,7 @@ FeaturePlot(aPD1_so,
             features = c("CD4", "FOXP3")) #Fig.S9c
 
 #Treg annotation based on CD4 and FOXP3
-Idents(aPD1_so) <- 'RNA_snn_res.0.2'
+Idents(aPD1_so) <- 'RNA_snn_res.0.1'
 CD4_seurat <- subset(aPD1_so, idents = "2")
 CD4_seurat$celltypes <- "CD4 T"
 grep("^FOXP3$", rownames(CD4_seurat@assays[["RNA"]]$counts))
