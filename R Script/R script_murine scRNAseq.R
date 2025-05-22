@@ -292,9 +292,8 @@ all_genes <- rownames(integrate.filtered.rna)
 genes_to_remove <- grep("pAb", all_genes, value = TRUE)
 counts_pAb <- GetAssayData(JoinLayers(integrate.filtered.rna, assay = "RNA"))
 counts_pAb <- counts_pAb[-(which(rownames(counts_pAb) %in% genes_to_remove)),]
-Idents(integrate.filtered.rna) <- "features"
-noabseq <- subset(JoinLayers(integrate.filtered.rna, 
-                             features = setdiff(rownames(integrate.filtered.rna),genes_to_remove)))
+noabseq <- integrate.filtered.rna
+noabseq[["RNA"]] <- CreateAssayObject(counts = counts_pAb)
 noabseq$cellidentity.group <- paste(noabseq$Sample_Name, noabseq$cellidentity, sep = "_")
 
 #Differential gene expression analysis
